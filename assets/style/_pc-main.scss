@@ -65,6 +65,7 @@
     }
 }
 
+// section second
 .second{
     .strong-point-area{
         display: flex;
@@ -84,8 +85,53 @@
         }
         .description{
             padding: 50px 30px 0;
-            font-size: 22px;
+            font-size: 20px;
             color: #495045;
         }
     }
+}
+
+// section-third
+.third{
+    // background: #ff4040;
+    background: #ff6969;
+    // background: linear-gradient(to right, #ff9b9b, #ff4040);
+    // background: #1cf0cc;
+    .career-area {
+        .info-area{
+            color: #fff;
+            .text-area{
+                // strong{
+                //     font-size: 17px;
+                // }
+                p{
+                    font-weight: 300;
+                }
+            }
+            .btn-group{
+                a{
+                    color: #ff6969;
+                    background: #fff;
+                    border-color: #fff;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.forth{
+    // background: #1cf0cc;
+}
+
+.fivth{
+    background: #efefef;
+}
+
+.footer-area{
+    // background: #dedede;
+    // color: #fff;
+    font-size: 18px;
+    padding: 8px 0;
+    text-align: center;
 }
