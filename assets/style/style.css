@@ -5068,6 +5068,9 @@ input, textarea {
   justify-content: flex-end;
   align-items: center;
   padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 .main .header .nav-bar a {
   color: #fff;
@@ -5151,6 +5154,7 @@ input, textarea {
   font-size: 18px;
   padding: 8px 0;
   text-align: center;
+  color: #929292;
 }
 
 @media screen and (max-width: 767px) {

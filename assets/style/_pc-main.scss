@@ -21,6 +21,9 @@
             justify-content: flex-end;
             align-items: center;
             padding: 15px;
+            position: fixed;
+            top: 0;
+            right: 0;
             a{
                 color: #fff;
                 padding: 10px 20px;
@@ -134,4 +137,5 @@
     font-size: 18px;
     padding: 8px 0;
     text-align: center;
+    color: #929292;
 }
