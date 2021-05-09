@@ -14,20 +14,23 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="../assets/style/style.css" rel="stylesheet">
+    <link href="assets/style/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <section class="main">
-        <header class="header" id="home">
-            <ui class="nav-bar center">
-                <li><a href="#Home">Home</a></li>
-                <!-- <li><a href="#"></a></li> -->
+    <section class="main" id="Home">
+        <header class="header">
+            <div class="menu-bar center">
+                <i class="fas fa-bars" onclick="showNav()"></i>
+            </div>
+            <ul class="nav-bar center">
+                <li class="active"><a href="#Home">Home</a></li>
                 <li><a href="#Career">Career</a></li>
                 <li><a href="#Project_1">Project.1</a></li>
                 <li><a href="#Project_2">Project.2</a></li>
+                <li onclick="showStrongPoint()" class="star"><a href="#"><i class="fas fa-star"></i></a></li>
                 <!-- <li><a href="#Project_3">Project.3</a></li> -->
-            </ui>
+            </ul>
         </header>
 
         <div class="key-word-area center">
@@ -43,24 +46,25 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="second">
         <div class="strong-point-area center">
+            <div class="bar-area" onclick="showStrongPoint()">
+               <span class="bar"></span>
+            </div>
             <div class="strong-point">
-                <img src="../assets/img/group-1.svg" alt="커뮤니케이션">
+                <img src="assets/img/group-1.svg" alt="커뮤니케이션">
                 <div class="description">
                     다양한 분야의 사람들과<br>커뮤니케이션 경험이 많습니다.
                 </div>
             </div>
             <div class="strong-point">
-                <img src="../assets/img/note-1.svg" alt="커뮤니케이션">
+                <img src="assets/img/note-1.svg" alt="커뮤니케이션">
                 <div class="description">
                     주도적으로 문제를 찾으며,<br>문제해결을 위해 끊임없이 도전합니다.
                 </div>
             </div>
             <div class="strong-point">
-                <img src="../assets/img/jogging-1.svg" alt="커뮤니케이션">
+                <img src="assets/img/jogging-1.svg" alt="커뮤니케이션">
                 <div class="description">
                     프론트앤드 풀스텍 개발자를 <br>목표로 매일매일 노력합니다.
                 </div>
@@ -69,36 +73,47 @@
 
     </section>
 
+
     <!-- lastorder -->
-    <section class="third project-area" id="Career">
+    <section class="second project-area" id="Career">
         <div class="career-area center">
             <div class="img-area">
-                <img src="../assets/img/app-img-no-bg.png" alt="lastorder-img">
+                <img src="assets/img/app-img-no-bg.png" alt="lastorder-img">
             </div>
             <div class="info-area mg-left-60">
-                <h3>라스트오더<span>_미로컴퍼니</span></h3>
+                <h3>라스트오더<span>_미로컴퍼니 2019-2021</span></h3>
                 <div class="text-area">
                     <strong>업무</strong>
-                    <p>라스트오더 앱 V2개발 및 운영</p>
-                    <p>라스트오더 내 웹페이지, 앱 등 7개의 프로젝트 UI개발</p>
+                    <p>라스트오더 앱 V2 프론트 개발 및 운영</p>
+                    <p>미로컴퍼니 공식 홈페이지, 주문관리 앱 등 7개의 프로젝트 UI개발</p>
     
                     <strong>포지션</strong>
                     <p>프론트앤드 UI개발</p>
     
                     <strong>프레임워크, 툴 및 사용언어</strong>
-                    <p>Vue, Vuex,  Node.js, Javascript, Jquery, Sass, Zeplin, S3, Gulp, NativeScript, ios Simulator, Android Studio, Onsen ui, Element ui, Bootstrap</p>
+                    <p>Vue, Vuex, Javascript, Jquery, Sass, Zeplin, S3, Gulp, Node.js, NativeScript, ios Simulator, Android Studio, Onsen ui, Element ui, Bootstrap</p>
                 </div>
                 <div class="btn-group mg-top-18">
-                    <a href="#" target="_blank" class="button">라스트오더 앱</a>
-                    <a href="#" target="_blank" class="button">라스트오더 웹</a>
-                    <a href="#" target="_blank" class="button">미로컴퍼니</a>
+                    <a href="https://go.onelink.me/app/uapios" target="_blank" class="button">Ios App</a>
+                    <a href="https://go.onelink.me/app/uapand" target="_blank" class="button">Aos App</a>
+                    <a href="https://app.lastorder.io" target="_blank" class="button">Web App</a>
                 </div>
+                <div class="btn-group">
+                    <a href="https://www.lastorder.co.kr" target="_blank" class="button">Website</a>
+                    <a href="https://www.myrocompany.com/" target="_blank" class="button">mycompany</a>
+                    <a href="https://apps.apple.com/app/id1464896299" target="_blank" class="button">주문관리 Ios App</a>
+                </div>
+                <!-- <div class="btn-group">
+                    <a href="https://www.lastorder.co.kr" target="_blank" class="button">영업관리</a>
+                    <a href="https://www.myrocompany.com/" target="_blank" class="button">Bo</a>
+                    <a href="https://apps.apple.com/app/id1464896299" target="_blank" class="button">fms</a>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- whale -->
-    <section class="forth project-area" id="Project_1">
+    <section class="third project-area" id="Project_1">
         <div class="center">
             <div class="info-area mg-right-60">
                 <h3>고래의 목표_<span>앱개발</span></h3>
@@ -106,13 +121,22 @@
                         <strong>목표달성 앱_wep-app</strong>
                         <p> App_기능구현</p>                
                     
-                        <strong>플러그인</strong>
-                        <p>Progress, Swiper, Slider...</p>
-                    
-                        <strong>기능구현</strong>
-                        <p> Animation, ProgressBar, Accordion, Swich, Login, Tab...</p>
+                        <strong>업데이트 버전 2021</strong>
+                        <p>Vue, Vuex</p>
+                        
+                        <div class="btn-group">
+                            <a href="https://changuri.github.io/whale/" target="_blank">앱 바로가기</a>
+                            <a href="https://github.com/changuri/whale" target="_blank">git 소스보기</a>
+                            <a href="https://changuri.github.io/whale/document/whale_prototype.pdf" target="_blank">프로토타입</a>
+                        </div>
+
+                        <strong>구 버전 2019</strong>
+                        <p> </p>
+                        <p>플러그인_Progress, Swiper, Slider...</p>
+                        <p>기능구현_Animation, ProgressBar, Accordion, Swich, Login, Tab...</p>
                     </div>
-                    <div class="btn-group mg-top-18">
+
+                    <div class="btn-group">
                         <a href="https://changuri.github.io/whale/" target="_blank">앱 바로가기</a>
                         <a href="https://github.com/changuri/whale" target="_blank">git 소스보기</a>
                         <a href="https://changuri.github.io/whale/document/whale_appInfo.jpg" target="_blank">앱 소개</a>
@@ -129,19 +153,19 @@
                     </div>
             </div>
             <div class="img-area">
-                <img src="../assets/img/whale.png" alt="whale-img">
+                <img src="assets/img/whale.png" alt="whale-img">
             </div>
         </div>
     </section>
 
     <!-- hostels.com -->
-    <section class="fivth project-area" id="Project_2">
+    <section class="forth project-area" id="Project_2">
         <div class="center">
             <div class="img-area">
-                <img src="../assets/img/hostels.png" alt="hostels-img">
+                <img src="assets/img/hostels.png" alt="hostels-img">
             </div>
             <div class="info-area mg-left-60">
-                <h3>Hostels.com_<span>사이트 리뉴얼</span></h3>
+                <h3>Hostels.com_<span>사이트 리뉴얼 2019</span></h3>
                     <div class="text-area">
                         <strong>반응형 웹_pc.ver / mo.ver</strong>
                         <p> main page, popup</p>                
@@ -172,7 +196,7 @@
     </section>
 
     <!-- components -->
-    <!-- <section class="" id="Project_3">
+    <!-- <section class="fivth" id="Project_3">
         <div class="center">
             <div class="center">
                 <div class="img-area">
@@ -187,11 +211,11 @@
 
     <footer class="footer-area">
         <div class="center">
-            COPYRIGHT © 2020 CHAE HYEON, All rights Reserved / 
-            Last Update On March. 21th, 2021
+            COPYRIGHT © 2021 CHAE HYEON, All rights Reserved / 
+            Last Update On May. 7th, 2021
         </div>
     </footer>
     
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

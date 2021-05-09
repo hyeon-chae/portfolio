@@ -3,9 +3,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans KR", "Roboto", sans-serif;
   color: #292929;
+  position: relative;
 }
 
 li,
@@ -5011,21 +5016,25 @@ input, textarea {
 }
 .project-area .center .info-area h3 {
   font-size: 26px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .project-area .center .info-area h3 span {
   font-size: 16px;
 }
+.project-area .center .info-area h3 .year {
+  padding-left: 8px;
+  font-weight: 300;
+}
 .project-area .center .info-area .text-area {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 .project-area .center .info-area .text-area strong {
   font-size: 18px;
-  margin-top: 16px;
+  padding-top: 16px;
   display: block;
 }
 .project-area .center .info-area .text-area p {
-  font-size: 18px;
+  font-size: 16px;
 }
 .project-area .center .info-area .btn-group {
   padding: 6px 0px;
@@ -5041,13 +5050,35 @@ input, textarea {
   border: solid 1px #292929;
   border-radius: 20px;
   text-align: center;
+  transition: 0.2s;
 }
-.project-area .center .info-area .btn-group a:first-child {
-  margin: 4px 0px;
+.project-area .center .info-area .btn-group a:hover {
+  color: #fff;
+  background: #1cf0cb;
+  border: solid 1px #1cf0cb;
 }
 
+@keyframes starRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 7px;
+  }
+  100% {
+    top: 0px;
+  }
+}
 .main {
-  background: url("../img/img05.jpg") no-repeat center;
+  background: url("../img/img04.jpg") no-repeat center;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -5060,19 +5091,94 @@ input, textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(80, 80, 55, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.main .header {
+  z-index: 100;
 }
 .main .header .nav-bar {
-  z-index: 1;
+  z-index: 100;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 15px;
 }
+.main .header .nav-bar li.active a {
+  color: #1cf0cb !important;
+}
 .main .header .nav-bar a {
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
+  transition: 0.4s;
+}
+.main .header .nav-bar a:hover {
+  color: #1cf0cb;
+}
+.main .header .nav-bar a:hover .fa-star {
+  animation: starRotate 2s ease-out;
+  -webkit-animation: starRotate 2s ease-out;
+  -ms-animation: starRotate 2s ease-out;
+}
+.main .header .nav-bar .active {
+  color: #1cf0cb;
+}
+.main .header .menu-bar {
+  display: none;
+  z-index: 100;
+}
+.main .header .menu-bar .fa-bars {
+  font-size: 24px;
+  color: #1cf0cb;
+  text-align: right;
+  border-radius: 28px;
+}
+.main .header.scrolled {
+  position: fixed;
+  width: 1200px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.main .header.scrolled .nav-bar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+  opacity: 0;
+  position: fixed;
+  right: -100px;
+  top: 55px;
+}
+.main .header.scrolled .nav-bar.active {
+  opacity: 1;
+  transition: 0.4s;
+  right: 0;
+}
+.main .header.scrolled li a {
+  padding: 12px 0px 3px 12px;
+  line-height: 24px;
+}
+.main .header.scrolled li a:hover {
+  border-bottom: 1px solid;
+  color: #1cf0cb;
+  padding-right: 10px;
+}
+.main .header.scrolled li a.change-color {
+  color: #292929;
+}
+.main .header.scrolled li a.change-color:hover {
+  color: #1cf0cb;
+}
+.main .header.scrolled .menu-bar {
+  padding: 20px 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main .header.scrolled .menu-bar .fa-bars {
+  cursor: pointer;
 }
 .main .key-word-area {
   z-index: 1;
@@ -5103,47 +5209,88 @@ input, textarea {
   border-bottom: 1px solid #bfff00;
   display: inline-block;
 }
-
-.second .strong-point-area {
+.main .strong-point-area {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 22px 22px 0 0;
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 120px 0;
   text-align: center;
+  height: 35px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: 1s;
 }
-.second .strong-point-area .strong-point {
+.main .strong-point-area .bar-area {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 0.6s infinite linear;
+  -webkit-animation: bounce 0.6s infinite linear;
+  -ms-animation: bounce 0.6s infinite linear;
+  transition: 0.4s;
+  padding: 12px 20px;
+}
+.main .strong-point-area .bar-area .bar {
+  height: 6px;
+  width: 80px;
+  border-radius: 3px;
+  background: #1cf0cb;
+  display: block;
+}
+.main .strong-point-area .strong-point {
+  padding: 80px 0 40px;
   width: 33.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
-.second .strong-point-area .strong-point img {
+.main .strong-point-area .strong-point img {
   width: 130px;
   height: 130px;
 }
-.second .strong-point-area .description {
+.main .strong-point-area .description {
   padding: 50px 30px 0;
   font-size: 20px;
-  color: #495045;
-}
-
-.third {
-  background: #ff6969;
-}
-.third .career-area .info-area {
   color: #fff;
 }
-.third .career-area .info-area .text-area p {
+.main .strong-point-area.active {
+  height: 360px;
+}
+.main .strong-point-area.active .strong-point {
+  display: block;
+}
+
+.second {
+  z-index: 2;
+  background: #ff6969;
+}
+.second .career-area .info-area {
+  color: #fff;
+}
+.second .career-area .info-area .text-area p {
   font-weight: 300;
 }
-.third .career-area .info-area .btn-group a {
+.second .career-area .info-area .btn-group a {
   color: #ff6969;
   background: #fff;
   border-color: #fff;
   font-weight: 500;
 }
+.second .career-area .info-area .btn-group a:hover {
+  color: #fff;
+  background: #292929;
+  border: solid 1px #292929;
+}
 
-.fivth {
+.forth {
   background: #efefef;
 }
 
@@ -5156,7 +5303,7 @@ input, textarea {
 
 @media screen and (max-width: 767px) {
   .main {
-    background: url("../img/img05.jpg") no-repeat center;
+    background: url("../img/img04.jpg") no-repeat center;
     width: 100%;
     height: 100vh;
     background-size: cover;

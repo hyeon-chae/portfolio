@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Noto Sans KR', 'Roboto', sans-serif;
     color: #292929;
+    position: relative;
 }
 
 li,
@@ -128,24 +133,29 @@ input, textarea {
         }
         .info-area {
            width: 45%;
-           h3{
-               font-size: 26px;
-               margin-bottom: 20px;
-               span{
-                   font-size: 16px;
-               }
-           }
+            h3{
+                font-size: 26px;
+                padding-bottom: 20px;
+                span{
+                    font-size: 16px;
+                }
+                .year{
+                    padding-left: 8px;
+                    font-weight: 300;
+                }
+            }
             .text-area{
-                margin-bottom: 16px;
+                padding-bottom: 16px;
                 strong{
                     font-size: 18px;
-                    margin-top: 16px;
+                    padding-top: 16px;
                     display: block;
                 }
                 p{
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
+  
             .btn-group{
                 padding: 6px 0px;
                 // background: #bfff00;
@@ -160,10 +170,13 @@ input, textarea {
                     border: solid 1px #292929;
                     border-radius: 20px;
                     text-align: center;
-                    &:first-child{
-                        margin: 4px 0px;
+                    transition: .2s;
+                    &:hover{
+                        color: #fff;
+                        background: #1cf0cb;
+                        border: solid 1px #1cf0cb;
                     }
-                }
+                } 
             }
         }
     }
@@ -171,3 +184,25 @@ input, textarea {
 
 // #bfff00
 // rgba(0, 239, 209, 1)
+
+// animation
+@keyframes starRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: 7px;
+    }   
+    100%{
+       top: 0px;
+    }
+}
