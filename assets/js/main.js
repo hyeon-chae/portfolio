@@ -5,7 +5,8 @@ const mainArea = document.querySelector('.main'),
     // thirdArea = document.querySelector('.third'),
     // forthArea = document.querySelector('.forth');
     section = document.querySelector('section'),
-    nav = document.querySelectorAll('.nav-bar li')
+    nav = document.querySelectorAll('.nav-bar li'),
+    strongPointArea = document.querySelector('.strong-point-area');
 
 let activeIndex = 0;
     
@@ -47,10 +48,9 @@ window.addEventListener("scroll", event => {
     for(let i = 0; i < 4; i++){ //4번 반복
         if(fromTop >= mainHeight * i && fromTop < mainHeight * (i + 1)){ //A 0~99
             NOWINDEX = i;
-            
         } 
     } 
-    console.log(NOWINDEX);
+    // console.log(NOWINDEX);
     // nave bar 변형
     if (NOWINDEX > 0) {
         headerArea.classList.add('scrolled');
@@ -72,20 +72,21 @@ window.addEventListener("scroll", event => {
     }
   
     // list active
-    activeNav(NOWINDEX)
-
+    activeNav(NOWINDEX);
 
  })
 
 // main
 showStrongPoint = () => {
-    const strongPointArea = document.querySelector('.strong-point-area');
     strongPointArea.classList.toggle('active');
-    // const strongPoint = strongPointArea.querySelectorAll('.strong-point');
-    // console.log(strongPoint);
-    // strongPoint.forEach(item => {
-    //     item.classList.toggle('active');
-    // }, 5000);
+    setTimeout(showStrongPointChild, 400);
+}
+showStrongPointChild = () => {
+    const strongPoint = strongPointArea.querySelectorAll('.strong-point');
+    console.log(strongPoint);
+    strongPoint.forEach(item => {
+        item.classList.toggle('active');
+    });
 }
 showNav = () => {
     const navBar = headerArea.querySelector('.nav-bar');

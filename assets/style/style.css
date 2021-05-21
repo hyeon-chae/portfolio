@@ -5068,13 +5068,13 @@ input, textarea {
 }
 @keyframes bounce {
   0% {
-    top: 0px;
-  }
-  50% {
     top: 7px;
   }
-  100% {
+  50% {
     top: 0px;
+  }
+  100% {
+    top: 7px;
   }
 }
 .main {
@@ -5211,18 +5211,18 @@ input, textarea {
 }
 .main .strong-point-area {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 250px;
+  height: 40px;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 22px 22px 0 0;
+  border-radius: 20px;
   z-index: 1;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   text-align: center;
-  height: 35px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   transition: 1s;
 }
@@ -5236,6 +5236,7 @@ input, textarea {
   -ms-animation: bounce 0.6s infinite linear;
   transition: 0.4s;
   padding: 12px 20px;
+  z-index: 1;
 }
 .main .strong-point-area .bar-area .bar {
   height: 6px;
@@ -5245,27 +5246,33 @@ input, textarea {
   display: block;
 }
 .main .strong-point-area .strong-point {
-  padding: 80px 0 40px;
   width: 33.33%;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  display: none;
+  display: flex;
+  opacity: 0;
+  transition: 0.4s;
+  transform: scale(0);
 }
 .main .strong-point-area .strong-point img {
   width: 130px;
   height: 130px;
 }
-.main .strong-point-area .description {
+.main .strong-point-area .strong-point .description {
   padding: 50px 30px 0;
   font-size: 20px;
   color: #fff;
 }
 .main .strong-point-area.active {
+  width: 100%;
   height: 360px;
+  padding: 80px 0 40px;
+  box-sizing: border-box;
 }
-.main .strong-point-area.active .strong-point {
-  display: block;
+.main .strong-point-area.active .strong-point.active {
+  border-radius: 22px;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .second {

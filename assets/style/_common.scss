@@ -197,12 +197,12 @@ input, textarea {
 
 @keyframes bounce {
     0%{
-        top: 0px;
+        top: 7px;
     }
     50%{
-        top: 7px;
+        top: 0px;
     }   
     100%{
-       top: 0px;
+        top: 7px;
     }
 }
