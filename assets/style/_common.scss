@@ -186,6 +186,17 @@ input, textarea {
 // rgba(0, 239, 209, 1)
 
 // animation
+@keyframes movingKeyWords{
+    from{
+        right: -300px;
+        opacity: 0;
+    }
+    to{
+        right: 0px;
+        opacity: 1;
+    }
+}
+
 @keyframes starRotate {
     from{
         transform: rotate(0deg);

@@ -5058,6 +5058,16 @@ input, textarea {
   border: solid 1px #1cf0cb;
 }
 
+@keyframes movingKeyWords {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
 @keyframes starRotate {
   from {
     transform: rotate(0deg);
@@ -5194,6 +5204,10 @@ input, textarea {
 }
 .main .key-word-area .key-word .wrap {
   padding: 15px 0;
+  opacity: 0;
+  position: absolute;
+  width: 300px;
+  right: 0;
 }
 .main .key-word-area .key-word .wrap p {
   color: #bfff00;
@@ -5208,6 +5222,15 @@ input, textarea {
   font-size: 42px;
   border-bottom: 1px solid #bfff00;
   display: inline-block;
+}
+.main .key-word-area .key-word .wrap.first-key.active {
+  animation: movingKeyWords 1s 0.4s ease-out forwards;
+}
+.main .key-word-area .key-word .wrap.second-key {
+  top: 200px;
+}
+.main .key-word-area .key-word .wrap.second-key.active {
+  animation: movingKeyWords 1s 1s ease-out forwards;
 }
 .main .strong-point-area {
   position: absolute;
@@ -5273,6 +5296,30 @@ input, textarea {
   border-radius: 22px;
   opacity: 1;
   transform: scale(1);
+}
+.main .goto-top-area {
+  display: none;
+}
+.main .goto-top-area .top-btn {
+  position: fixed;
+  right: 0;
+  bottom: 70px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  width: 65px;
+  height: 65px;
+  border-radius: 40px;
+  padding: 15px 17px 12px;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-right: 50px;
+}
+.main .goto-top-area .top-btn .fa-arrow-up {
+  color: #bbb;
+  font-size: 36px;
+}
+.main .goto-top-area.active {
+  display: block;
 }
 
 .second {
