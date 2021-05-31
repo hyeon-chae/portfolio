@@ -5010,6 +5010,7 @@ input, textarea {
 }
 .project-area .center .img-area img {
   width: 100%;
+  height: 100%;
 }
 .project-area .center .info-area {
   width: 45%;
