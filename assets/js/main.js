@@ -6,18 +6,24 @@ const mainArea = document.querySelector('.main'),
     strongPointArea = document.querySelector('.strong-point-area'),
     gotoTopBtn = document.querySelector('.goto-top-area'),
     firstKey = document.querySelector('.first-key'),
-    secondKey = document.querySelector('.second-key');
+    secondKey = document.querySelector('.second-key'),
+    thirdKey = document.querySelector('.third-key'),
+    forthKey = document.querySelector('.forth-key');
 
 let activeIndex = 0;
 
-// key area
+// key-word area
 keyWordsAni = (i) => {
     if (i == 0 || i == 4) {
         firstKey.classList.add('active');
         secondKey.classList.add('active');
+        thirdKey.classList.add('active');
+        forthKey.classList.add('active');
     } else {
         firstKey.classList.remove('active');
         secondKey.classList.remove('active');
+        thirdKey.classList.remove('active');
+        forthKey.classList.remove('active');
     }
 }
 
