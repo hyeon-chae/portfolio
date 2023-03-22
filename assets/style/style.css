@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: "Noto Sans KR", "Roboto", sans-serif;
-  color: #292929;
+  color: #333;
   position: relative;
 }
 
@@ -21,7 +21,7 @@ ol {
 a {
   font-family: "Noto Sans KR", "Roboto", sans-serif;
   text-decoration: none;
-  color: #292929;
+  color: #333;
   display: inline-block;
 }
 
@@ -5046,17 +5046,19 @@ input, textarea {
 .project-area .center .info-area .btn-group a {
   font-size: 16px;
   width: 100%;
-  padding: 8px 0px;
+  padding: 8px 0px 10px;
   margin: 4px 10px;
-  border: solid 1px #292929;
-  border-radius: 20px;
+  border: solid 1px #333;
+  border-radius: 22px;
   text-align: center;
   transition: 0.2s;
+  box-sizing: border-box;
+  height: 42px;
 }
 .project-area .center .info-area .btn-group a:hover {
   color: #fff;
-  background: #1cf0cb;
-  border: solid 1px #1cf0cb;
+  background: #333;
+  border: solid 1px #333;
 }
 
 @keyframes movingKeyWords {
@@ -5089,7 +5091,7 @@ input, textarea {
   }
 }
 .main {
-  background: url("../img/img04.jpg") no-repeat center;
+  background: url("../img/img05.jpg") no-repeat 90% center;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -5115,16 +5117,16 @@ input, textarea {
   padding: 15px;
 }
 .main .header .nav-bar li.active a {
-  color: #1cf0cb !important;
+  color: #333 !important;
 }
 .main .header .nav-bar a {
-  color: #fff;
+  color: #c2c2c2;
   padding: 10px 20px;
   font-size: 16px;
   transition: 0.4s;
 }
 .main .header .nav-bar a:hover {
-  color: #1cf0cb;
+  color: #333;
 }
 .main .header .nav-bar a:hover .fa-star {
   animation: starRotate 2s ease-out;
@@ -5132,7 +5134,7 @@ input, textarea {
   -ms-animation: starRotate 2s ease-out;
 }
 .main .header .nav-bar .active {
-  color: #1cf0cb;
+  color: #333;
 }
 .main .header .menu-bar {
   display: none;
@@ -5140,7 +5142,7 @@ input, textarea {
 }
 .main .header .menu-bar .fa-bars {
   font-size: 24px;
-  color: #1cf0cb;
+  color: #333;
   text-align: right;
   border-radius: 28px;
 }
@@ -5169,18 +5171,19 @@ input, textarea {
 }
 .main .header.scrolled li a {
   padding: 12px 0px 3px 12px;
+  color: #aaa;
   line-height: 24px;
 }
 .main .header.scrolled li a:hover {
   border-bottom: 1px solid;
-  color: #1cf0cb;
+  color: #333;
   padding-right: 10px;
 }
 .main .header.scrolled li a.change-color {
-  color: #292929;
+  color: #fff;
 }
 .main .header.scrolled li a.change-color:hover {
-  color: #1cf0cb;
+  color: #333;
 }
 .main .header.scrolled .menu-bar {
   padding: 20px 0 10px;
@@ -5199,8 +5202,8 @@ input, textarea {
 }
 .main .key-word-area .key-word {
   position: absolute;
-  right: 5%;
-  top: 25%;
+  right: 0;
+  top: 35%;
   text-align: right;
 }
 .main .key-word-area .key-word .wrap {
@@ -5211,7 +5214,7 @@ input, textarea {
   right: 0;
 }
 .main .key-word-area .key-word .wrap p {
-  color: #bfff00;
+  color: #c2c2c2;
   font-size: 34px;
   font-weight: 100;
 }
@@ -5273,7 +5276,7 @@ input, textarea {
   height: 6px;
   width: 80px;
   border-radius: 3px;
-  background: #1cf0cb;
+  background: #fff;
   display: block;
 }
 .main .strong-point-area .strong-point {
@@ -5292,7 +5295,7 @@ input, textarea {
 .main .strong-point-area .strong-point .description {
   padding: 50px 30px 0;
   font-size: 20px;
-  color: #fff;
+  color: #c2c2c2;
 }
 .main .strong-point-area.active {
   width: 100%;
@@ -5323,37 +5326,55 @@ input, textarea {
   margin-right: 50px;
 }
 .main .goto-top-area .top-btn .fa-arrow-up {
-  color: #bbb;
+  color: #333;
   font-size: 36px;
 }
 .main .goto-top-area.active {
   display: block;
 }
 
-.second {
+.partner-center {
+  z-index: 2;
+  background: #1a91ff;
+}
+.partner-center .career-area .info-area {
+  color: #fff;
+}
+.partner-center .career-area .info-area .text-area {
+  font-weight: 300;
+}
+.partner-center .career-area .info-area .btn-group a {
+  color: #1a91ff;
+  background: #fff;
+  border-color: #fff;
+  font-weight: 500;
+}
+.partner-center .career-area .info-area .btn-group a:hover {
+  color: #fff;
+  background: #333;
+  border: solid 1px #333;
+}
+
+.lastorder {
   z-index: 2;
   background: #ff6969;
 }
-.second .career-area .info-area {
+.lastorder .career-area .info-area {
   color: #fff;
 }
-.second .career-area .info-area .text-area p {
+.lastorder .career-area .info-area .text-area p {
   font-weight: 300;
 }
-.second .career-area .info-area .btn-group a {
+.lastorder .career-area .info-area .btn-group a {
   color: #ff6969;
   background: #fff;
   border-color: #fff;
   font-weight: 500;
 }
-.second .career-area .info-area .btn-group a:hover {
+.lastorder .career-area .info-area .btn-group a:hover {
   color: #fff;
-  background: #292929;
-  border: solid 1px #292929;
-}
-
-.forth {
-  background: #efefef;
+  background: #333;
+  border: solid 1px #333;
 }
 
 .footer-area {

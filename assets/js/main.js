@@ -63,7 +63,7 @@ window.addEventListener("scroll", event => {
     let NOWINDEX = 0; 
     // console.log(fromTop);
     // 화면의 index
-    for(let i = 0; i < 4; i++){ //4번 반복
+    for(let i = 0; i < 5; i++){ //5번 반복
         if(fromTop >= mainHeight * i && fromTop < mainHeight * (i + 1)){ //A 0~99
             NOWINDEX = i;
         } 
@@ -74,7 +74,8 @@ window.addEventListener("scroll", event => {
         headerArea.classList.add('scrolled');
         const navBtn = headerArea.querySelectorAll('.nav-bar a')
         gotoTopBtn.classList.add('active');
-        if (NOWINDEX > 1) {
+
+        if (NOWINDEX % 2 !== 0) {
             navBtn.forEach(item => { 
                 item.classList.add('change-color')
             })
