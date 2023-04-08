@@ -5091,7 +5091,7 @@ input, textarea {
   }
 }
 .main {
-  background: url("../img/img02.jpg") no-repeat 90% center;
+  background: url("../img/img05.jpg") no-repeat 90% center;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -5232,19 +5232,19 @@ input, textarea {
   animation: movingKeyWords 1s 0.4s ease-out forwards;
 }
 .main .key-word-area .key-word .wrap.second-key {
-  top: 70px;
+  top: 50px;
 }
 .main .key-word-area .key-word .wrap.second-key.active {
   animation: movingKeyWords 1s 1s ease-out forwards;
 }
 .main .key-word-area .key-word .wrap.third-key {
-  top: 120px;
+  top: 100px;
 }
 .main .key-word-area .key-word .wrap.third-key.active {
   animation: movingKeyWords 1s 1.5s ease-out forwards;
 }
 .main .key-word-area .key-word .wrap.forth-key {
-  top: 170px;
+  top: 150px;
 }
 .main .key-word-area .key-word .wrap.forth-key.active {
   animation: movingKeyWords 1s 2s ease-out forwards;
