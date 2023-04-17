@@ -8,22 +8,23 @@ const mainArea = document.querySelector('.main'),
     firstKey = document.querySelector('.first-key'),
     secondKey = document.querySelector('.second-key'),
     thirdKey = document.querySelector('.third-key'),
-    forthKey = document.querySelector('.forth-key');
+    modal = document.querySelector('.modal-area');
+    // forthKey = document.querySelector('.forth-key');
 
 let activeIndex = 0;
 
 // key-word area
 keyWordsAni = (i) => {
-    if (i == 0 || i == 4) {
+    if (i == 0 || i == 3) {
         firstKey.classList.add('active');
         secondKey.classList.add('active');
         thirdKey.classList.add('active');
-        forthKey.classList.add('active');
+        // forthKey.classList.add('active');
     } else {
         firstKey.classList.remove('active');
         secondKey.classList.remove('active');
         thirdKey.classList.remove('active');
-        forthKey.classList.remove('active');
+        // forthKey.classList.remove('active');
     }
 }
 
@@ -63,7 +64,7 @@ window.addEventListener("scroll", event => {
     let NOWINDEX = 0; 
     // console.log(fromTop);
     // 화면의 index
-    for(let i = 0; i < 4; i++){ //4번 반복
+    for(let i = 0; i < 5; i++){ //5번 반복
         if(fromTop >= mainHeight * i && fromTop < mainHeight * (i + 1)){ //A 0~99
             NOWINDEX = i;
         } 
@@ -74,7 +75,8 @@ window.addEventListener("scroll", event => {
         headerArea.classList.add('scrolled');
         const navBtn = headerArea.querySelectorAll('.nav-bar a')
         gotoTopBtn.classList.add('active');
-        if (NOWINDEX > 1) {
+
+        if (NOWINDEX % 2 !== 0) {
             navBtn.forEach(item => { 
                 item.classList.add('change-color')
             })
@@ -102,7 +104,7 @@ showStrongPoint = () => {
 }
 showStrongPointChild = () => {
     const strongPoint = strongPointArea.querySelectorAll('.strong-point');
-    console.log(strongPoint);
+    // console.log(strongPoint);
     strongPoint.forEach(item => {
         item.classList.toggle('active');
     });
@@ -111,10 +113,21 @@ showNav = () => {
     const navBar = headerArea.querySelector('.nav-bar');
     navBar.classList.toggle('active');
 }
-gotoTop = () =>{
+gotoTop = () => {
     activeIndex = 0;
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+// show modal
+ShowModal = () => {
+    modal.classList.add('active');
+    document.body.style.overflowY = 'hidden'
+}
+
+closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflowY = 'scroll'
 }
 
 init = () => {
