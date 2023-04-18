@@ -8,7 +8,8 @@ const mainArea = document.querySelector('.main'),
     firstKey = document.querySelector('.first-key'),
     secondKey = document.querySelector('.second-key'),
     thirdKey = document.querySelector('.third-key'),
-    modal = document.querySelector('.modal-area');
+    modal = document.querySelector('.modal-area'),
+    modalContent = document.querySelector('.modal-content');
     // forthKey = document.querySelector('.forth-key');
 
 let activeIndex = 0;
@@ -119,15 +120,33 @@ gotoTop = () => {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// show modal
-ShowModal = () => {
+// show modal & add video
+showModal = (id) => {
     modal.classList.add('active');
     document.body.style.overflowY = 'hidden'
+    createModal(id);
 }
 
+// close modal & remove video
 closeModal = () => {
+    const videoContent = modalContent.querySelector('.video-content')
     modal.classList.remove('active');
     document.body.style.overflowY = 'scroll'
+    console.log(videoContent);
+    modalContent.removeChild(videoContent);
+}
+
+// 모달 생성
+createModal = (id) => {
+    const video = document.createElement('video');
+
+    video.src = `./assets/video/${id}.mp4`;
+    video.controls = true;
+    video.className ='video-content'
+
+    const newModal = modalContent.appendChild(video);
+    
+    return newModal;
 }
 
 init = () => {
