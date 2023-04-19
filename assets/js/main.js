@@ -43,6 +43,7 @@ activeNav = (i) => {
        
     }
 }
+
 clickedNav = () => {
     for (let i = 0; i < nav.length; i++){
         activeIndex = i;
@@ -100,20 +101,23 @@ window.addEventListener("scroll", event => {
 
 // main
 showStrongPoint = () => {
-    strongPointArea.classList.toggle('active');
-    setTimeout(showStrongPointChild, 400);
+    strongPointArea.classList.add('active');
+    // setTimeout(showStrongPointChild, 400);
 }
-showStrongPointChild = () => {
-    const strongPoint = strongPointArea.querySelectorAll('.strong-point');
-    // console.log(strongPoint);
-    strongPoint.forEach(item => {
-        item.classList.toggle('active');
-    });
-}
+
+// showStrongPointChild = () => {
+//     const strongPoint = strongPointArea.querySelectorAll('.strong-point');
+//     // console.log(strongPoint);
+//     strongPoint.forEach(item => {
+//         item.classList.toggle('active');
+//     });
+// }
+
 showNav = () => {
     const navBar = headerArea.querySelector('.nav-bar');
     navBar.classList.toggle('active');
 }
+
 gotoTop = () => {
     activeIndex = 0;
     document.body.scrollTop = 0; // For Safari
@@ -151,5 +155,6 @@ createModal = (id) => {
 
 init = () => {
     clickedNav()
+    setTimeout(showStrongPoint, 2000);
 };
 init();

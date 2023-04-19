@@ -239,3 +239,14 @@ input, textarea {
         top: 7px;
     }
 }
+
+@keyframes bottomUp{
+    from{
+        bottom: -360px;
+        opacity: 0;
+    }
+    to{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
