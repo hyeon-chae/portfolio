@@ -136,7 +136,6 @@ closeModal = () => {
     const videoContent = modalContent.querySelector('.video-content')
     modal.classList.remove('active');
     document.body.style.overflowY = 'scroll'
-    console.log(videoContent);
     modalContent.removeChild(videoContent);
 }
 
@@ -144,7 +143,7 @@ closeModal = () => {
 createModal = (id) => {
     const video = document.createElement('video');
 
-    video.src = `./assets/video/${id}.mp4`;
+    video.src = `./src/assets/video/${id}.mp4`;
     video.controls = true;
     video.className ='video-content'
 
