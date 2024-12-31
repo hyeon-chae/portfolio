@@ -78,7 +78,7 @@ window.addEventListener("scroll", event => {
         const navBtn = headerArea.querySelectorAll('.nav-bar a')
         gotoTopBtn.classList.add('active');
 
-        if (NOWINDEX % 2 !== 0) {
+        if (NOWINDEX % 2 === 0) {
             navBtn.forEach(item => { 
                 item.classList.add('change-color')
             })
@@ -102,6 +102,7 @@ window.addEventListener("scroll", event => {
 // main
 showStrongPoint = () => {
     strongPointArea.classList.add('active');
+
     // setTimeout(showStrongPointChild, 400);
 }
 
