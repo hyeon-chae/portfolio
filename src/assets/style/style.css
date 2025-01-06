@@ -5066,6 +5066,7 @@ input, textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .project-area .center .info-area .btn-group a {
   font-size: 16px;
@@ -5346,6 +5347,7 @@ input, textarea {
   position: fixed;
   right: 0;
   bottom: 70px;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   width: 65px;
