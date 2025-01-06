@@ -5120,7 +5120,7 @@ input, textarea {
   }
 }
 .main {
-  background: url("../img/img15.jpg") no-repeat 90% center;
+  background: url("../img/img15.jpg") no-repeat 100% center;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -5146,18 +5146,20 @@ input, textarea {
   padding: 15px;
 }
 .main .header .nav-bar li.active a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
+  border-bottom: 1px solid #fff;
 }
 .main .header .nav-bar a {
-  color: #c2c2c2;
+  color: #f2f2f2;
+  font-weight: 300;
   padding: 10px 20px;
   font-size: 16px;
   transition: 0.4s;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 .main .header .nav-bar a:hover {
-  color: #333;
+  color: #fff;
 }
 .main .header .nav-bar a:hover .fa-star {
   animation: starRotate 2s ease-out;
@@ -5199,21 +5201,27 @@ input, textarea {
   opacity: 1;
   transition: 0.4s;
   right: 0;
+  color: #333 !important;
+}
+.main .header.scrolled li.active a {
+  font-weight: 700;
+}
+.main .header.scrolled li.active a.change-color {
+  color: #333;
+  border-bottom: 1px solid #333;
 }
 .main .header.scrolled li a {
   padding: 12px 0px 3px 12px;
-  color: #808080;
   line-height: 24px;
 }
 .main .header.scrolled li a:hover {
-  color: #333;
   padding-right: 10px;
 }
 .main .header.scrolled li a.change-color {
-  color: #fff;
+  color: #808080;
 }
-.main .header.scrolled li a.change-color:hover {
-  color: #333;
+.main .header.scrolled li.star {
+  display: none;
 }
 .main .header.scrolled .menu-bar {
   padding: 20px 0 10px;
@@ -5245,7 +5253,7 @@ input, textarea {
 .main .key-word-area .key-word .wrap p {
   color: #c2c2c2;
   font-size: 34px;
-  font-weight: 100;
+  font-weight: 300;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.65);
 }
 .main .key-word-area .key-word .wrap p span {
