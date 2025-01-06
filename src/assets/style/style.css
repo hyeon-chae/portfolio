@@ -5053,8 +5053,13 @@ input, textarea {
   font-size: 18px;
   display: block;
 }
-.project-area .center .info-area .text-area p {
+.project-area .center .info-area .text-area .skills {
+  font-size: 14px;
+}
+.project-area .center .info-area .text-area .info {
   font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
 }
 .project-area .center .info-area .btn-group {
   padding: 6px 0px;
@@ -5264,6 +5269,9 @@ input, textarea {
   font-size: 38px;
   font-weight: 300;
 }
+.main .key-word-area .key-word .wrap p.detail {
+  font-size: 18px;
+}
 .main .key-word-area .key-word .wrap.first-key.active {
   animation: movingKeyWords 1s 0.4s ease-out forwards;
 }
@@ -5359,7 +5367,7 @@ input, textarea {
 
 .partner-center {
   z-index: 2;
-  background: #1a91ff;
+  background: #3499ff;
 }
 .partner-center .career-area .info-area {
   color: #fff;
@@ -5368,7 +5376,7 @@ input, textarea {
   font-weight: 300;
 }
 .partner-center .career-area .info-area .btn-group a {
-  color: #1a91ff;
+  color: #3499ff;
   background: #fff;
   border-color: #fff;
   font-weight: 500;
