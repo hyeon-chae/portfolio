@@ -5053,8 +5053,13 @@ input, textarea {
   font-size: 18px;
   display: block;
 }
-.project-area .center .info-area .text-area p {
+.project-area .center .info-area .text-area .skills {
+  font-size: 14px;
+}
+.project-area .center .info-area .text-area .info {
   font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
 }
 .project-area .center .info-area .btn-group {
   padding: 6px 0px;
@@ -5263,6 +5268,9 @@ input, textarea {
 .main .key-word-area .key-word .wrap p.title {
   font-size: 38px;
   font-weight: 300;
+}
+.main .key-word-area .key-word .wrap p.detail {
+  font-size: 18px;
 }
 .main .key-word-area .key-word .wrap.first-key.active {
   animation: movingKeyWords 1s 0.4s ease-out forwards;
