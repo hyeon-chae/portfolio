@@ -29,6 +29,11 @@
           background: #00000070;
           border-radius: 8px;
         }
+        li {
+          &.active {
+            line-height: 18px;
+          }
+        }
       }
       li {
         &.active {

@@ -5518,6 +5518,9 @@ textarea {
     background: rgba(0, 0, 0, 0.4392156863);
     border-radius: 8px;
   }
+  .main .header .nav-bar li.active {
+    line-height: 18px;
+  }
   .main .header li.active a {
     font-weight: 700;
   }
