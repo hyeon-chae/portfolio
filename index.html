@@ -133,9 +133,9 @@
             <a href="https://www.airklass.com" target="_blank">에어클래스</a>
           </div>
           <div class="btn-group">
-            <a onclick="showModal('QubeMain')">유저앱 미리보기</a>
-            <a onclick="showModal('QubeAdmin')">어드민 미리보기</a>
-            <a onclick="showModal('QubePageEditor')">에디터 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('QubeMain')">유저앱 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('QubeAdmin')">어드민 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('QubePageEditor')">에디터 미리보기</a>
           </div>
         </div>
       </div>
@@ -164,8 +164,8 @@
             >
           </div> -->
           <div class="btn-group">
-            <a onclick="showModal('gomiMall')">고미몰 미리보기</a>
-            <a onclick="showModal('gomiMallAdmin')">어드민 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('gomiMall')">고미몰 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('gomiMallAdmin')">어드민 미리보기</a>
           </div>
 
           <div class="text-area mg-top-30">
@@ -181,7 +181,7 @@
           </div>
 
           <div class="btn-group">
-            <a onclick="showModal('partnerAdmin')" target="_blank">파트너센터 어드민 미리보기</a>
+            <a href="#" onclick="event.preventDefault(); showModal('partnerAdmin')">파트너센터 어드민 미리보기</a>
           </div>
         </div>
 
@@ -236,35 +236,47 @@
     <section class="movie-nara project-area" id="Project_KEP">
       <div class="center">
         <div class="info-area">
-          <h3>Korea Elections Project</h3>
+          <h3>KEP - 모두의 투표</h3>
           <div class="text-area">
-            <strong
-              >백엔드개발자 1인, 프론트개발자 1인, 디자이너 1인 구성으로 진행한 프로젝트 (2025.5.11~2025.6.31)</strong
-            >
+            <strong>2025.09 ~ 2025.12 </strong>
 
-            <p class="mg-top-8 skills">NextJS, TypeScript, Vercel, Tailwind, Shadcn-ui</p>
+            <p class="mg-top-8 skills">
+              Next.js, TypeScript, Tailwind, Shadcn-ui, TanStack Query, Zod, Recharts, portone, Jest, Vercel, mono-repo
+            </p>
+
+            <p class="mg-top-16 info">
+              서비스 기획부터 기능 정의, UI 디자인, UX 설계까지 전반적인 PO 역할을 수행하며, 실시간 투표·여론조사를
+              생성하고 참여할 수 있는 웹 플랫폼을 기획·구현했습니다. SSG/ISR(getStaticProps + revalidate)을 적용해 초기
+              로딩 성능을 최적화했고, React Hook Form과 Zod를 통해 복잡한 폼 유효성 검사를 안정적으로 처리했습니다.
+              실시간 투표 결과는 Recharts를 활용해 시각화했으며, Presenter 패턴을 적용해 비즈니스 로직과 UI를 분리하여
+              유지보수성을 높였습니다. 추가로 PortOne SDK를 연동한 본인인증 기능과 카카오톡 공유하기 기능을 구현해
+              서비스 확장성과 사용자 경험을 강화했습니다.
+            </p>
+          </div>
+
+          <div class="btn-group mg-bottom-18">
+            <a href="https://dev.korea-election.com" target="_blank">dev 바로가기</a>
+            <a href="https://korea-election.com/" target="_blank">Production</a>
+            <a href="https://github.com/Futiland/korea-elections" target="_blank">git 소스보기</a>
+          </div>
+
+          <div class="text-area">
+            <strong>2025.5.11 ~ 2025.6.31 Korea Election Project </strong>
+
             <p class="mg-top-16 info">
               Next.js 기반의 프론트엔드 개발 시 SEO(Search Engine Optimization)를 고려하여 페이지를 구성하였으며,
               Vercel을 활용해 효율적인 배포 및 버전 관리를 수행하였습니다. 또한, 본인인증 기능을 통해 사용자 회원가입
               프로세스를 안전하고 신뢰성 있게 구현하였습니다.
             </p>
-
-            <p class="mg-top-16 info-en">
-              Developed the frontend using Next.js with SEO optimization in mind, and managed deployment and version
-              control via Vercel. Additionally, implemented a secure and reliable user registration flow through
-              identity verification.
-            </p>
           </div>
 
-          <div class="btn-group mg-top-18">
-            <a href="https://dev.korea-election.com" target="_blank">dev 바로가기</a>
-            <a href="https://github.com/Futiland/korea-elections" target="_blank">git 소스보기</a>
+          <div class="btn-group">
+            <a href="#" onclick="event.preventDefault(); showModal('ProjectKEP')"> 지난 프로젝트 보기</a>
             <a
               href="https://www.figma.com/design/28nS58gz606Lq9pL8Ijmt5/-shadcn-ui---Design-System--Community-?node-id=103-1046&p=f&t=lS5ZK3bq780ZXPSU-0"
               target="_blank"
               >디자인</a
             >
-            <a href="https://korea-election.com/" target="_blank">Production</a>
           </div>
         </div>
         <div class="img-area show-video" onclick="showModal('ProjectKEP')">
@@ -301,7 +313,9 @@
 
     <!-- footer -->
     <footer class="footer-area">
-      <div class="center">COPYRIGHT © 2025 CHAE HYEON, All rights Reserved / Last Update On Jun. 2025</div>
+      <div class="center">
+        COPYRIGHT © 2025 CHAE HYEON, All rights Reserved / Last Update On <span id="lastUpdateDate"></span>
+      </div>
     </footer>
 
     <!-- 모달 -->
