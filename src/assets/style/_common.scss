@@ -13,6 +13,12 @@ body {
   position: relative;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
 li,
 ol {
   list-style: none;
